@@ -31,7 +31,7 @@ void i2cScan(){
             if (address<16) SerialScan.print("0");
             SerialScan.print(address,HEX);
             //--- adresse connue ?
-            if( 0x5C == address ) SerialScan.print("  DHT12  Temp & Humidity");
+            if( TETE == address ) SerialScan.print("  DHT12  Temp & Humidity");
             if( 0x68 == address ) SerialScan.print("  DS1307 RTC");
             if( 0x27 == (address|0x7) ) SerialScan.print("  PCF8574 /LCD interface");
             if( 0x57 == (address|0x7) ) SerialScan.print("  24Cxx EEPROM");
